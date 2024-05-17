@@ -5,7 +5,9 @@
 		<script>
 			function add2Numbers()
 			{
-				document.getElementById('result').innerHTML = 'Resulto';
+				var num1 = document.getElementById('num1').value;
+				var num1 = document.getElementById('num2').value;
+				document.getElementById('result').innerHTML = num1 + num2;
 			}
 		</script>
     </head>
@@ -22,7 +24,7 @@
 			<button onclick="document.getElementById('num1').value='irgendwos'">
         	    Change Value 1
         	</button>
-        	<button onclick="add2Numbers()">
+        	<button onclick="document.getElementById('num1').value='irgendwos'">
         	    Change Value 2
         	</button>
 			<p id="result">
