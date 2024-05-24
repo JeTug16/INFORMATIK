@@ -41,21 +41,21 @@
  
         function sqrtNumber() {
             var num1 = parseFloat(document.getElementById('num1').value);
-            document.getElementById("result").innerHTML = Math.sqrt(num1);
+            document.getElementById("result").innerHTML = Math.pow(num1, 1 / num2);
         }
  
         function logNumber() {
             var num1 = parseFloat(document.getElementById('num1').value);
-            document.getElementById("result").innerHTML = Math.log(num1);
+            document.getElementById("result").innerHTML = Math.log(num1) /Math.log(num2);
         }
 </script>
 </head>
 <body>
-<h1 id="myheading">Das ist ein selbstgemachter Taschenrechner</h1>
+<h1 id="myheading">Ultrarechner</h1>
 <form>
-<label for="num1">First Number:</label>
+<label for="num1">Erste Zahl:</label>
 <input type="text" id="num1" name="num1"><br><br>
-<label for="num2">Second Number:</label>
+<label for="num2">zweite Zahl:</label>
 <input type="text" id="num2" name="num2"><br><br>
 </form>
 <button onclick="add2Numbers()">Addieren</button>
