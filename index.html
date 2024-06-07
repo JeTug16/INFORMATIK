@@ -51,6 +51,29 @@
 			var num2 = parseFloat(document.getElementById('num2').value);
             document.getElementById("result").innerHTML = Math.log(num1) /Math.log(num2);
         }
+
+        function factNumber() {
+				var num1 = parseFloat(document.getElementById('num1').value);
+				if (num1 < 0) {
+					document.getElementById("result").innerHTML = "Error: Negative number";
+					return;
+				}
+				var factorial = 1;
+				for (var i = 1; i <= num1; i++) {
+					factorial *= i;
+				}
+				document.getElementById("result").innerHTML = factorial;
+			}
+			function celsiusToFahrenheit() {
+				var celsius = parseFloat(document.getElementById('num1').value);
+				var fahrenheit = (celsius * 9/5) + 32;
+				document.getElementById("result").innerHTML = fahrenheit + " °F";
+			}
+			function fahrenheitToCelsius() {
+				var fahrenheit = parseFloat(document.getElementById('num1').value);
+				var celsius = (fahrenheit - 32) * 5/9;
+				document.getElementById("result").innerHTML = celsius + " °C";
+			}
 </script>
 </head>
 <body>
@@ -69,6 +92,9 @@
 <button onclick="pow2Numbers()">^</button>
 <button onclick="sqrtNumber()">&#8730;</button>
 <button onclick="logNumber()">Logarithmieren</button>
+<button onclick="factNumber()">!</button>
+<button onclick="celsiusToFahrenheit()">C -> F</button>
+<button onclick="fahrenheitToCelsius()">F -> C</button>
 <p id="result"></p>
 <a href="page2.html">Hier gehts zum Ultra-Umrechner</a>
 </body>
